@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="heading">To-Do List</h1>
+        <div id="list-input">
+            <input type="text" id="new-task" placeholder="Enter task here ...">
+            <button id="create-task">Add</button>
+        </div>
+        <div id="task-data" class="flex">
+            <div id="list-data">
+                <div id="tasks" class="flex">
+                    <div id="task-done" class="flex">
+                        <img src="files/check-mark.png" alt="task-done">
+                        <span></span>
+                    </div>
+                    <p id="task-details"><span></span>Your task will appear here</p>
+                    <button id="del-task"><img src="files/delete.png" alt="delete"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="files/script.js"></script>
+</body>
+
+</html>
