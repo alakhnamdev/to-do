@@ -9,22 +9,26 @@ let create_tasks = () => {
         else {
             const task = `
                 <div id="tasks" class="flex">
-                    <div id="task-done" class="flex"><img src="files/check-mark.png" alt="task-done"><span></span></div>
+                    <div id="task-done" class="flex">
+                        <img src="files/check-mark.png" alt="task-done">
+                        <span></span>
+                    </div>
                     <p id="task-details">
-                    ${task_details.value}
+                        <span></span>
+                        ${task_details.value}
                     </p>
                     <button id="del-task"><img src="files/delete.png" alt="delete"></button>
                 </div>
             `;
             task_list.innerHTML += task;
-            del_tasks();
-            check_button();
             task_details.value = "";
             let last_task = document.querySelector("#tasks:last-child");
             last_task.style.scale = "0";
             const visible = setTimeout(() => {
                 last_task.style.scale = "1";
             }, 100);
+            del_tasks();
+            check_button();
         }
     })
 }
@@ -49,10 +53,10 @@ let check_button = () => {
             else {
                 item.children[0].style.display = "none";
                 item.children[1].style.display = "none";
+                item.style.border = "3px solid var(--mid-blue)";
                 item.style.opacity = "1";
                 item.parentNode.style.opacity = "1";
                 item.parentNode.style.filter = "grayscale(0)";
-                item.style.border = "3px solid var(--mid-blue)";
                 item.parentElement.children[1].children[0].style.width = "0%";
                 item.parentElement.children[1].style.opacity = "1";
                 item.parentElement.children[1].style.color = "var(--mid-blue)";
